@@ -1,23 +1,14 @@
-<app-heder></app-heder>
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inicio</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo= "inicio"></app-header>
 
 <ion-content>
 <ion-list>
-  <ion-item>
-    <ion-button routerLink="/Listar-Egresos">Listar Egresos</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-button routerLink="/Listar-Usuarios">Listar Usuarios</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-button routerLink="/Registro-Usuarios">Registro de Usuarios</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-button routerLink="/Registro-Egresos">Registro de Egresos</ion-button>
+
+  <ion-item
+    *ngFor="let componente of componentes"
+    [routerLink]= "componente.direccion"
+    >
+      <ion-icon [name]="componente.icono" slot="start"></ion-icon>
+      {{componente.nombre}}
   </ion-item>
 </ion-list>
 

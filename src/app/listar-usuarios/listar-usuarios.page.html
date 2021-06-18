@@ -1,12 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text="volver" mode="ios" defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title>Lista de Usuarios</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo= "Listar Usuarios"></app-header>
 
-<ion-content>
+    <ion-card-content>
 
-</ion-content>
+        <ion-card *ngFor="let dato_formulario of datos_formularios">
+            <ion-item>
+                campo 1: {{dato_formulario.campo1}}
+            </ion-item>
+            <ion-item>
+                 campo 2: {{dato_formulario.campo2}}
+             </ion-item>
+        </ion-card>
+
+    </ion-card-content>
